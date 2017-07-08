@@ -6,18 +6,25 @@
   function Truck(truckId, dataStoreInstance) {
     this.truckId = truckId;
     this.orders = dataStoreInstance;
+    console.log(truckId + ' ready to roll out.');
   }
 
   // * the Truck instance has a DataStore instance as one of its properties which has access to the DataStore methods
   // * order will be an object that has an email address as its key and the drink as its value
   Truck.prototype.createOrder = function (order) {
-    console.log('Adding order for: ' + order.emailAddress);
     this.orders.add(order.emailAddress, order)
+    console.log('Adding order for: ' + order.emailAddress);
   }
 
   // once again using the DataStore property, we use its 'remove' method
   Truck.prototype.deliverOrder = function (customerId) {
-    this.orders.remove(customerId);
+    // checks to see if order exists before removing
+    if (this.orders.data[customerId]) {
+      this.orders.remove(customerId);
+      console.log(customerId + ' has received their order.')
+    } else {
+      console.log('An order for ' + customerId + ' does not exist.')
+    }
   }
 
   Truck.prototype.printOrders = function () {
