@@ -12,18 +12,63 @@
     <section>
       <div class="panel panel-default">
         <div class="panel-body">
-
           <form data-smoothie-order="form">
+
+            <!-- Input fields for Drink Order and Email -->
             <div class="form-group">
               <label for="smoothieOrder">Drink Order</label>
               <input class="form-control" name="coffee" id="smoothieOrder" autofocus>
             </div>
             <div class="form-group">
-              <label for="emailInput">Email</label>
+              <label for="emailInput">Customer Email</label>
               <input type="email" class="form-control" name="emailAddress" id="emailInput" value="" placeholder="name@email.com">
             </div>
-          </form>
 
+            <!-- Radio Buttons for Size choices -->
+            <!-- <div class="radio">
+              <label>
+                <input type="radio" name="size" value="small">
+                Small
+              </label>
+            </div> -->
+            <div class="radio">
+              <label>
+                <input type="radio" name="size" value="regular" checked>
+                Regular
+              </label>
+            </div>
+            <div class="radio">
+              <label>
+                <input type="radio" name="size" value="large">
+                Large
+              </label>
+            </div>
+
+          <!-- </form>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-body">
+          <form data-smoothie-order="form"> -->
+
+            <!-- Drop down menu for Boost Additions -->
+            <div class="form-group">
+              <label for="Boost">Boost</label>
+              <select id="boostAdd" class="form-control" name="boost">
+                <option value="">None</option>
+                <option value="energy">Energy</option>
+                <option value="probiotic">Probiotic</option>
+                <option value="vitamin">Vitamin</option>
+              </select>
+            </div>
+
+            <!-- Range Slider for Boba Additions -->
+            <div class="form-group">
+              <label for="bobaLevel">Boba Addition</label>
+              <input type="range" name="boba" id="bobaLebel" value="0" min="0" max="50" step="10">
+            </div>
+
+          </form>
         </div>
       </div>
 
