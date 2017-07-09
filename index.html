@@ -25,12 +25,6 @@
             </div>
 
             <!-- Radio Buttons for Size choices -->
-            <!-- <div class="radio">
-              <label>
-                <input type="radio" name="size" value="small">
-                Small
-              </label>
-            </div> -->
             <div class="radio">
               <label>
                 <input type="radio" name="size" value="regular" checked>
@@ -65,8 +59,19 @@
             <!-- Range Slider for Boba Additions -->
             <div class="form-group">
               <label for="bobaLevel">Boba Addition</label>
-              <input type="range" name="boba" id="bobaLebel" value="0" min="0" max="50" step="10">
+              <input type="range" name="boba" id="bobaLebel" value="0" min="0" max="50" step="10" list="steplist">
+              <datalist id="steplist">
+                <option>0</option>
+                <option>10</option>
+                <option>20</option>
+                <option>30</option>
+                <option>40</option>
+                <option>50</option>
+              </datalist>
             </div>
+
+            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="reset" class="btn">Reset</button>
 
           </form>
         </div>
