@@ -10,7 +10,7 @@
   }
 
   // * the Truck instance has a DataStore instance as one of its properties which has access to the DataStore methods
-  // * order will be an object that has an email address as its key and the drink as its value
+  // * order will be an object that contains various info of a customer's order
   Truck.prototype.createOrder = function (order) {
     this.orders.add(order.emailAddress, order)
     console.log('Adding order for: ' + order.emailAddress);
