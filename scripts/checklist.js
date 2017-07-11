@@ -13,6 +13,22 @@
     }
   }
 
+  function Row(smoothieOrder) {
+    var $div =('<div></div>', {'data-smoothie-order': 'checkbox', 'class': 'checkbox'});
+    var $label = $('<label></label>');
+    var $checkbox = $('<input></input>', {type: checkbox, value: smoothieOrder.emailAddress});
+
+    var description = smoothieOrder + ' ';
+    if (smoothieOrder.boost) {
+      description += smoothieOrder.boost + ' ';
+    }
+    description += smoothieOrder.smoothie + ', ';
+    description += ' (' + smoothieOrder.emailAddress + ')';
+    description += ' [' + smoothieOrder.boba + 'x]';
+  }
+
+
+
   App.CheckList = CheckList;
   window.App = App;
 })(window);
